@@ -11,7 +11,7 @@ def generate_primes(limit):
     for num in range(2, limit + 1):
         if is_prime(num):
             primes.append(num)
-            print(num)
+            print(num) # Prints all the prime numbers
     return len(primes)
 
 limit = int(input("Enter the upper limit to generate prime numbers: "))

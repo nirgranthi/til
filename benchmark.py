@@ -3,12 +3,11 @@ import hashlib
 import multiprocessing
 
 def hash_benchmark(n):
-    # CPU load
     for i in range(n):
         hashlib.sha256(str(i).encode()).hexdigest()
 
 def main():
-    num_hashes = 2000000 # 2 Million hashes
+    num_hashes = 5000000 # CPU load, increase or decrease according to need
     
     print(f"Running Benchmark on CPU ({multiprocessing.cpu_count()} Cores)...")
     
