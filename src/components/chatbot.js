@@ -103,4 +103,4 @@ function ChatInterface({ sender, message }) {
 }
 
 
-export { ChatInput, ChatInterface };
+export { ChatInput };
