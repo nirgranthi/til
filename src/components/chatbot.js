@@ -1,6 +1,6 @@
 import user from '../assets/user.png';
 import robot from '../assets/robot.png';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 /* global Chatbot */
 
@@ -27,8 +27,16 @@ function ChatInput({ chatMessages, setChatMessages }) {
     };
 
     const SendMessages = () => {
+        const chatsRef = useRef(null)
+        useEffect(() => {
+            const chatsRefElem = chatsRef.current;
+            if (chatsRefElem) {
+                chatsRefElem.scrollTop = chatsRefElem.scrollHeight
+            }
+        }, [chatsRef]
+    )
         return (
-            <div className='chats'>
+            <div className='chats' ref={chatsRef} >
                 {chatMessages.map((msg) => (
                     <ChatInterface
                         sender={msg.sender} 
