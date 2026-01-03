@@ -1,7 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-import Shop from './components/socksnshoes';
-import {ChatInput, ChatInterface} from './components/chatbot';
+import {ChatInput} from './components/chatbot';
 
 function App() {
   const [chatMessages, setChatMessages] = useState([
