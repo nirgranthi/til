@@ -4,7 +4,7 @@ import threading
 import urllib3
 import itertools
 
-# 400000+ proxies for each
+# 400000+ proxies for each, takes too much time to check them all
 #http_proxies_raw = 'https://raw.githubusercontent.com/wiki/gfpcom/free-proxy-list/lists/http.txt'
 #https_proxies_raw = 'https://raw.githubusercontent.com/wiki/gfpcom/free-proxy-list/lists/https.txt'
 
@@ -33,20 +33,20 @@ def loadProxies(url, proxyType):
 
 #print(f"{GREEN}Total proxies fetched: {len(http_proxies)+len(http)}{RESET}")
 
-def check_proxy(proxy, protocol, fileHandle):
+def check_proxy(proxy, proxyType, fileHandle):
     count = next(counter)
-    targetUrl = 'https://httpbin.org/ip' if protocol=='https' else 'http://httpbin.org/ip'
+    targetUrl = 'https://httpbin.org/ip' if proxyType=='https' else 'http://httpbin.org/ip'
     try:
         #verify argument checks for SSL certificates
         response = requests.get(
-            targetUrl, 
-            proxies={'http': proxy, 'https': proxy}, 
-            timeout=5, 
+            targetUrl,
+            proxies={'http': proxy, 'https': proxy},
+            timeout=5,
             verify=False
         )
         if response.status_code == 200:
             with lock:
-                print(f"{GREEN}{count}:- Working {protocol}: {proxy}{RESET}")
+                print(f"{GREEN}{count}:- Working {proxyType}: {proxy}{RESET}")
                 fileHandle.write(f'{proxy}\n')
                 fileHandle.flush()
         else:
@@ -59,7 +59,7 @@ def check_proxy(proxy, protocol, fileHandle):
 
 def main():
     http_proxies = loadProxies(http_proxies_raw, 'HTTP')
-    https_proxies = loadProxies(http_proxies_raw, 'HTTPS')
+    https_proxies = loadProxies(https_proxies_raw, 'HTTPS')
 
     with open('working_http_proxies.txt', 'w') as httpFile, \
         open('working_https_proxies.txt', 'w') as httpsFile, \
