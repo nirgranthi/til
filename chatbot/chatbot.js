@@ -2,6 +2,7 @@ const Chatbot = {
   defaultResponses: {
     'hi' : `Hello! How can I help you?`,
     'hello': `Hello! How can I help you?`,
+    'ka ho' : `kaisan ba`,
     'how are you': `I'm doing great! How can I help you?`,
     'flip a coin': function () {
       const randomNumber = Math.random();
