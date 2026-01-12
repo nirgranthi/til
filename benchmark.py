@@ -7,7 +7,12 @@ def hash_benchmark(n):
         hashlib.sha256(str(i).encode()).hexdigest()
 
 def main():
-    num_hashes = 5000000 # CPU load, increase or decrease according to need
+    num_hashes = 20000000 # CPU load, increase or decrease according to need
+    '''
+    Running Benchmark on CPU (16 Cores)...
+    Single Core Time: 13.07 seconds
+    Multi Core Time: 2.84 seconds
+    '''
     
     print(f"Running Benchmark on CPU ({multiprocessing.cpu_count()} Cores)...")
     
