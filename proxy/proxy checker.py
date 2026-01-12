@@ -9,7 +9,7 @@ import itertools
 #https_proxies_raw = 'https://raw.githubusercontent.com/wiki/gfpcom/free-proxy-list/lists/https.txt'
 
 http_proxies_raw = 'https://raw.githubusercontent.com/TheSpeedX/PROXY-List/refs/heads/master/http.txt'  #40000+ proxies
-https_proxies_raw = ''
+https_proxies_raw = 'https://raw.githubusercontent.com/proxifly/free-proxy-list/refs/heads/main/proxies/protocols/https/data.txt'
 
 GREEN = '\033[92m'
 RED = '\033[91m'
@@ -28,7 +28,7 @@ def loadProxies(url, proxyType):
         response = requests.get(url)
         proxies.extend([line.strip() for line in response.text.splitlines() if line.strip()])
     except Exception as e:
-        print(f"{YELLOW}[!] Failed to load {proxyType} proxies: {e}{RESET}")
+        print(f"{RED}[!] Failed to load {proxyType} proxies: {e}{RESET}")
     return list(set(proxies))
 
 #print(f"{GREEN}Total proxies fetched: {len(http_proxies)+len(http)}{RESET}")

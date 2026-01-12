@@ -47,11 +47,19 @@ function ChatInput({ chatMessages, setChatMessages }) {
             </div>
         );
     }
+    const SendButtonRef = useRef(null);
+    useEffect(() => {
+        const div = SendButtonRef.current;
+        if (div) {
+            div.addEventListener('Enter', handleSend)
+        }
+    })
+
 
     return (
         <>
             <SendMessages/>
-            <div className='inputContainer'>
+            <div ref={SendButtonRef} className='inputContainer'>
                 <input 
                     placeholder="Send a message to Chatbot" 
                     onChange={SaveInputText}
@@ -102,5 +110,38 @@ function ChatInterface({ sender, message }) {
     );
 }
 
+function App() {
+  const [chatMessages, setChatMessages] = useState([
+        {
+            message: "Hi there!",
+            sender: 'user',
+            id: 1
+        }, 
+        {
+            message: "Hello, how can I help you today?",
+            sender: 'robot',
+            id: 2
+        }, 
+        {
+            message: "get me todays date",
+            sender: 'user',
+            id: 3
+        }, 
+        {
+            message: "it is ummm... oops i forgot, google it for me and tell me",
+            sender: 'robot',
+            id: 4
+        }
+    ]);
 
-export { ChatInput };
+  return (
+    <div className='chatContainer'>
+      <ChatInput
+        chatMessages={chatMessages}
+        setChatMessages={setChatMessages}
+      />
+    </div>
+  );
+}
+
+export default App;
