@@ -1,0 +1,2 @@
+rewriting ultimate conquerer in typescript
+completing Ether (i need to learn typescript and some few things in react too i don't know how much time it will take but i'll try to make it as quick as i can. i want to invest in Ether with best of my skills i dont want to procrastinate or compromise in any way with this project, many many months i have thouoght about Ether so i want to be proud of it when im done with it, it may not look lik it but it is a major event and a project for me)
