@@ -110,7 +110,7 @@ function ChatInterface({ sender, message }) {
     );
 }
 
-function App() {
+export default function ChatBotApp() {
   const [chatMessages, setChatMessages] = useState([
         {
             message: "Hi there!",
@@ -142,6 +142,6 @@ function App() {
       />
     </div>
   );
-}
+};
 
-export default App;
+export {ChatBotApp};
