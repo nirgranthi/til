@@ -47,15 +47,7 @@ function ChatInput({ chatMessages, setChatMessages }) {
             </div>
         );
     }
-    const SendButtonRef = useRef(null);
-    useEffect(() => {
-        const div = SendButtonRef.current;
-        if (div) {
-            div.addEventListener('Enter', handleSend)
-        }
-    })
-
-
+    
     return (
         <>
             <SendMessages/>
@@ -64,6 +56,7 @@ function ChatInput({ chatMessages, setChatMessages }) {
                     placeholder="Send a message to Chatbot" 
                     onChange={SaveInputText}
                     value={inputText}
+                    onKeyDown={(e) => { if (e.key === "Enter") handleSend() }}
                     className='inputBox'
                     />
                 <button
