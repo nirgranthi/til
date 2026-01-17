@@ -1,14 +1,13 @@
-import { useState } from 'react'
 import Homepage from './pages/Homepage'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Routes, Route } from 'react-router'
 import './App.css'
 
 function App() {
   return (
-    <>
-      <Homepage/>
-    </>
+    <Routes>
+      <Route index element={<Homepage />} />
+      <Route path='checkout' element={<div>checkout</div>} />
+    </Routes>
   )
 }
 
