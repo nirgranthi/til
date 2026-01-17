@@ -89,7 +89,7 @@ export default function Homepage() {
                     <div className="product-container">
                         <div className="product-image-container">
                             <img className="product-image"
-                            src="images/products/intermediate-composite-basketball.jpg" />
+                                src="images/products/intermediate-composite-basketball.jpg" />
                         </div>
 
                         <div className="product-name limit-text-to-2-lines">
@@ -138,7 +138,7 @@ export default function Homepage() {
                     <div className="product-container">
                         <div className="product-image-container">
                             <img className="product-image"
-                            src="images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg" />
+                                src="images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg" />
                         </div>
 
                         <div className="product-name limit-text-to-2-lines">
@@ -147,9 +147,9 @@ export default function Homepage() {
 
                         <div className="product-rating-container">
                             <img className="product-rating-stars"
-                            src="images/ratings/rating-45.png" />
+                                src="images/ratings/rating-45.png" />
                             <div className="product-rating-count link-primary">
-                            56
+                                56
                             </div>
                         </div>
 
@@ -184,7 +184,7 @@ export default function Homepage() {
                         </button>
                     </div>
                 </div>
-            </div>        
+            </div>
         </>
     );
 }
