@@ -5,7 +5,8 @@ export default function Homepage() {
     return (
         <>
             <title>Homepage</title>
-            
+            <link rel='icon' href='/home.png' />
+
             <Header />
 
             <div className="home-page">

@@ -5,7 +5,8 @@ export function Checkout() {
     return (
         <>
             <title>Checkout</title>
-            
+            <link rel='icon' href='/checkout.png' />
+
             <div className="checkout-header">
                 <div className="header-content">
                     <div className="checkout-header-left-section">

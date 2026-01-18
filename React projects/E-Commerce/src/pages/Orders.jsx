@@ -5,7 +5,8 @@ export function Orders() {
     return (
         <>
             <title>Orders</title>
-            
+            <link rel='icon' href='/orders.png' />
+
             <Header />
 
             <div className="orders-page">

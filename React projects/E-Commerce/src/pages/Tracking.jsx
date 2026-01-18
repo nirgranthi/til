@@ -5,7 +5,8 @@ export function Tracking() {
     return (
         <>
             <title>Tracking</title>
-            
+            <link rel='icon' href='/tracking.png' />
+
             <Header />
 
             <div className="tracking-page">
