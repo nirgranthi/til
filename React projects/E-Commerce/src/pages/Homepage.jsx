@@ -4,6 +4,8 @@ import './styles/Homepage.css';
 export default function Homepage() {
     return (
         <>
+            <title>Homepage</title>
+            
             <Header />
 
             <div className="home-page">
