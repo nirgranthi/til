@@ -1,8 +1,17 @@
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import { Header } from '../Components/Header';
-import { products } from '../data/products'
 import './styles/Homepage.css';
 
 export default function Homepage() {
+    const [products, setProducts] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:3000/api/products')
+            .then((response) => {
+                setProducts(response.data)
+            })
+    }, []);
+
     return (
         <>
             <title>Homepage</title>
@@ -34,7 +43,7 @@ export default function Homepage() {
                                 </div>
 
                                 <div className="product-price">
-                                    {`$${(product.priceCents/100).toFixed(2)}`}
+                                    {`$${(product.priceCents / 100).toFixed(2)}`}
                                 </div>
 
                                 <div className="product-quantity-container">
