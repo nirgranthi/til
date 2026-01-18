@@ -17,11 +17,11 @@ export default [
         sourceType: 'module',
       },
     },
-    settings: { react: { version: '18.3' } }, // React version batana zaroori hai
+    settings: { react: { version: '18.3' } },
     plugins: {
       react,
       'react-hooks': reactHooks,
-      'react-refresh': reactRefresh, // Yahan register karna bhool gaye the!
+      'react-refresh': reactRefresh,
     },
     rules: {
       ...js.configs.recommended.rules,
@@ -29,7 +29,7 @@ export default [
       ...react.configs.flat['jsx-runtime'].rules,
       ...reactHooks.configs.recommended.rules,
       
-      // Ye rule specifically 'class' vs 'className' check karta hai
+      
       'react/no-unknown-property': 'error', 
       
       'react/jsx-no-target-blank': 'off',
@@ -38,6 +38,7 @@ export default [
         { allowConstantExport: true },
       ],
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      'react/prop-types' : 'off',
     },
   },
 ]
