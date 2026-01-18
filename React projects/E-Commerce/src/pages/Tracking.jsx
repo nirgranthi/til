@@ -1,13 +1,13 @@
 import { Header } from '../Components/Header'
 import './styles/Tracking.css'
 
-export function Tracking() {
+export function Tracking({cart}) {
     return (
         <>
             <title>Tracking</title>
             <link rel='icon' href='/tracking.png' />
 
-            <Header />
+            <Header cart={cart} />
 
             <div className="tracking-page">
                 <div className="order-tracking">
