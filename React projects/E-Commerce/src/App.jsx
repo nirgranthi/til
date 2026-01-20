@@ -1,4 +1,4 @@
-import Homepage from './pages/Homepage'
+import Homepage from './pages/Homepage/Homepage'
 import { Checkout } from './pages/Checkout'
 import { Orders } from './pages/Orders'
 import { Tracking } from './pages/Tracking'
