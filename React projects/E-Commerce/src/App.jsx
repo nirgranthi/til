@@ -1,5 +1,5 @@
 import Homepage from './pages/Homepage/Homepage'
-import { Checkout } from './pages/Checkout'
+import { Checkout } from './pages/Checkout/Checkout'
 import { Orders } from './pages/Orders/Orders'
 import { Tracking } from './pages/Tracking'
 import { Routes, Route } from 'react-router'
