@@ -1,4 +1,6 @@
-export function CheckoutHeader({ totalCartItems }) {
+import { totalCartItems } from "../../utils/TotalCartItems"
+
+export function CheckoutHeader({ cart }) {
     return (
         <div className="checkout-header">
             <div className="header-content">
@@ -11,7 +13,7 @@ export function CheckoutHeader({ totalCartItems }) {
 
                 <div className="checkout-header-middle-section">
                     Checkout (<a className="return-to-home-link"
-                        href="/">{totalCartItems} items</a>)
+                        href="/">{totalCartItems(cart)} items</a>)
                 </div>
 
                 <div className="checkout-header-right-section">

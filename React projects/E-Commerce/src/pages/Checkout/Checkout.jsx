@@ -10,12 +10,6 @@ export function Checkout({ cart }) {
     const [deliveryOptions, setDeliveryOption] = useState([]);
     const [paymentSummary, setPaymentSummary] = useState(null);
 
-    let totalCartItems = 0
-
-    cart.forEach((cartItem) => {
-        totalCartItems += cartItem.quantity
-    })
-
     useEffect(() => {
         axios.get('/api/delivery-options?expand=estimatedDeliveryTime')
             .then((response) => {
@@ -33,7 +27,7 @@ export function Checkout({ cart }) {
             <title>Checkout</title>
             <link rel='icon' href='/checkout.png' />
 
-            <CheckoutHeader totalCartItems={totalCartItems} />
+            <CheckoutHeader cart={cart} />
 
             <div className="checkout-page">
                 <div className="page-title">Review your order</div>
