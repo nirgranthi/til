@@ -11,4 +11,4 @@ startTime = time.perf_counter()
 endTime = time.perf_counter()
 
 timeTaken = endTime - startTime
-print(f"Execution Time: {timedelta(seconds=round(timeTaken))}")
+print(f"Execution Time: {timedelta(seconds=timeTaken)}")
