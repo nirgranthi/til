@@ -7,5 +7,4 @@ def count_lines(filename):
         
 
 filename = 'passwords.txt'
-print(count_lines(filename))
-
+print(f"Total lines: {count_lines(filename)}")
