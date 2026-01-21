@@ -1,3 +1,6 @@
+reset = '\033[0m'
+yellow = '\033[33m'
+
 def count_lines(filename):
     with open(filename, "rb") as f:
         megaBytes = 1024*1024 # (this is 1MB)if needed to increase MBs, just multiply "*number"
@@ -7,4 +10,4 @@ def count_lines(filename):
         
 
 filename = 'passwords.txt'
-print(f"Total lines: {count_lines(filename)}")
+print(f"{yellow}Total lines: {count_lines(filename)}{reset}")

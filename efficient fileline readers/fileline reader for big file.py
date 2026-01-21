@@ -1,5 +1,6 @@
 import mmap
-#mmap memory maps the file as if it were a part of the RAM
+reset = '\033[0m'
+yellow = '\033[33m'
 
 def count_lines(filename):
     with open(filename, "r+b") as f:
@@ -7,4 +8,4 @@ def count_lines(filename):
             return mm.read().count(b'\n')
 
 filename = 'passwords.txt'
-print(f"Total lines: {count_lines(filename)}")
+print(f"{yellow}Total lines: {count_lines(filename)}{reset}")
