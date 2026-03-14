@@ -1,0 +1,39 @@
+/* add "aria-label=" tag too for buttons and images */
+
+
+/* this goes in index.html */
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  {/* <!-- Primary Meta Tags --> */}
+  <title>Your Local AI | Run LLMs in Your Browser</title>
+  <meta name="title" content="Your Local AI | Run LLMs in Your Browser" />
+  <meta name="description"
+    content="Run LLMs directly in your browser. No cloud, no subscriptions, and 100% privacy. Everything runs on your device with zero configuration." />
+  <meta name="keywords"
+    content="local AI, LLM, browser AI, private AI, Wllama, web AI, local-slave, privacy first AI" />
+  <meta name="author" content="nirgranthi" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English">
+  <meta name="theme-color" content="#000000" />
+  <link rel="canonical" href="https://local-slave.nirgranthi.in/" />
+
+  {/* <!-- Open Graph / Facebook --> */}
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://local-slave.nirgranthi.in/" />
+  <meta property="og:title" content="Your Local AI | Run LLMs in Your Browser" />
+  <meta property="og:description"
+    content="Run LLMs directly in your browser. No cloud, no subscriptions, and 100% privacy. Everything runs on your device with zero configuration." />
+  <meta property="og:image" content="https://local-slave.nirgranthi.in/logo.png" />
+
+  {/* <!-- Twitter --> */}
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://local-slave.nirgranthi.in/" />
+  <meta property="twitter:title" content="Your Local AI | Run LLMs in Your Browser" />
+  <meta property="twitter:description"
+    content="Run LLMs directly in your browser. No cloud, no subscriptions, and 100% privacy. Everything runs on your device with zero configuration." />
+  <meta property="twitter:image" content="https://local-slave.nirgranthi.in/logo.png" />
+
+  <link rel="icon" type="image/png" href="/logo.png" />
+</head>
